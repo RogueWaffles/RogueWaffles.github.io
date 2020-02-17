@@ -3,13 +3,17 @@
 }
 
 .top {
-    text-align: center;
     background-color: gray;
     border-color: black;
     border-style: solid;
     border-width: medium;
     
 }
+
+.top h1{
+    text-align: center;
+}
+
 section h1, h3 {
     font-family: 'Cambay', sans-serif; 
     font-style: bold;
@@ -19,6 +23,7 @@ section h1, h3 {
     
 }
 
+
 h1 {
     background-color: black;
     color: white;
@@ -27,6 +32,13 @@ h1 {
     margin-top: -1px;
     margin-right: -1px;
 }
+
+
+.chroma{ 
+    float: right;
+    width: 100px;
+}
+
 
 h3{
     color: white;
@@ -86,6 +98,9 @@ body {
     margin: auto;
     background-color: dimgray;
     padding: 70px;
+    border-color: dimgray;
+    border-style: solid;
+    border-width: medium;
 }
 
 .row:after {
