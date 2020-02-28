@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+}
+
+.top {
+    background-color: gray;
+    border-color: black;
+    border-style: solid;
+    border-width: medium;
+    
+}
+
+.top h1{
+    text-align: center;
+}
+
+section h1, h3 {
+    font-family: 'Cambay', sans-serif; 
+    font-style: bold;
+    background-color: darkslateblue;
+    margin: 3px;
+    padding: 1%;
+    
+}
+		
+h4{
+    text-align: center;
+}
+
+
+h1 {
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+    margin-left: -1px;
+    margin-top: -1px;
+    margin-right: -1px;
+}
+
+
+.chroma{ 
+    float: right;
+    width: 100px;
+}
+
+
+h3{
+    color: white;
+}
+
+section li {
+    list-style-type: none;
+    border-style: solid;
+    border-color: lightgray;
+    margin: 3px;
+    padding: 1%;
+    background-color: grey;
+    
+}
+
+.HPimg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hooseclr{
+    color:darkgreen;
+    font-size: 25px;
+}
+
+.Slytherin{
+    color:darkgreen;
+    font-size: 25px;
+}
+
+.HPButton{
+    background-color: saddlebrown;
+    border-color: darkgoldenrod;
+    border-style: solid;
+    text-decoration: none;
+    padding: 15px 15px;
+    cursor: pointer;
+    display: inline-block;
+    color:goldenrod;
+}
+
+.back{
+    border-width: thick;
+    background-color: sienna;
+    color:goldenrod;
+}
+.HPB2:hover{
+    background-color: chocolate;
+}
+.HPB:hover{
+    background:url('http://www.addglitter.com/link-sparkle.gif');
+}
+
+.HPli{
+    border-color: darkgoldenrod;
+    background-color: saddlebrown
+}
+
+.HPli:hover{
+    background-color: chocolate;
+    color: black;
+}
+.center{
+    text-align: center;
+}
+
+section li:hover{
+    background-color: darkviolet;
+}
+
+a:hover{
+    background-color: violet;
+    color: white;
+}
+article li {
+    list-style-type: none;
+}
+
+.font, body{
+    font-family: 'Cambay', sans-serif; 
+    font-style: normal;
+    
+}
+
+body section{
+    text-align: justify;
+}
+
+.sum-text{
+    padding: 5px;
+    
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-color: aquamarine;
+    border-style: double;
+    border-width: thick;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+body {
+    width: 90%;
+    margin: auto;
+    background-color: dimgray;
+    padding: 70px;
+    border-color: dimgray;
+    border-style: solid;
+    border-width: medium;
+}
+
+.row:after {
+    clear: both;
+    content: "";
+    display: table;
+    }
+.right-col {
+    float: right;
+    width: 50%;}
+.left-col {
+    float: left;
+    width: 50%;
+}
