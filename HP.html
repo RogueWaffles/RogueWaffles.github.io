@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Harry Potter</title>
+<link rel="stylesheet" href=style.css>
+<link href="https://fonts.googleapis.com/css?family=Cambay:400,700&display=swap" rel="stylesheet">
+<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+    </script>
+</head>
+<body class="back">
+
+    <h4>This is the Harry Potter House for the owner of the Resume</h4>
+    <section class="center Slytherin"><p id="house"></p></section>
+    <div class="center"><button onclick="reveal()" class="HPButton HPB2"><div class="HPB">Reveal House!</div></button></div>
+    <br><br>
+    <h4>Want to see your House and who is in that house?</h4>
+    <section class="center hooseclr" id="dell"><p id="yhouse"></p></section>
+    <div class="center"><button Class="HPButton HPB2" onclick="fetchhouse()"><div class="HPB">Click Here!</div></button></div>
+    <br><br>
+    <section id="characters"></section>
+    <br>
+    <img src="imgs/map.jpg" class="HPimg">
+    <script>
+        const key = '$2a$10$RHblt89/iNiBDQBS2y1DtOnt9vB95hbw3NuErZhhQl4B9dhKHBAee';
+        const API = "https://www.potterapi.com/v1/sortingHat";
+        const API2K = "http://hp-api.herokuapp.com/api/characters/house/";
+        
+        const API2 = API2K.concat(scrub2);
+        var scrub2 = "";
+       
+        
+    
+        function fetchhouse(){
+            
+        var x = document.getElementById('yhouse');
+    var objXMLHttpRequest = new XMLHttpRequest();
+    objXMLHttpRequest.open('GET', API);
+    objXMLHttpRequest.onreadystatechange = function() {
+  if(objXMLHttpRequest.readyState === 4) {
+    if(objXMLHttpRequest.status === 200) {
+          var scrub = objXMLHttpRequest.responseText;
+        scrub = scrub.replace(/"/, "");
+        scrub2 = scrub.replace(/"/, "");
+        if (scrub2 == "Ravenclaw"){
+            document.getElementById('dell').style.color = 'darkblue'
+        }
+        else if (scrub2 == "Gryffindor"){
+            document.getElementById('dell').style.color = 'darkred'
+
+        }
+        else if (scrub2 == "Hufflepuff"){
+            document.getElementById('dell').style.color = 'gold'
+        }
+        else{
+            document.getElementById('dell').style.color = 'darkgreen'
+        }
+         
+        x.innerHTML = scrub2;
+        
+        classmate();
+        } else {
+          alert('Error Code: ' +  objXMLHttpRequest.status);
+          alert('Error Message: ' + objXMLHttpRequest.statusText);
+    }
+  }
+}
+
+objXMLHttpRequest.send(null);
+    }
+               
+
+   function classmate(){
+       const API2 = API2K.concat(scrub2);
+    var l = document.getElementById('characters');
+    var objXMLHttpRequest = new XMLHttpRequest();
+    objXMLHttpRequest.open('GET', API2);
+    objXMLHttpRequest.onreadystatechange = function() {
+    if(objXMLHttpRequest.readyState === 4) {
+    if(objXMLHttpRequest.status === 200) { 
+    var text = objXMLHttpRequest.responseText;
+    text = '"' + text + '"';
+       var jerry = text;
+        //var dill = jerry.split("");
+        var x = 0;
+        while(x < jerry.length){
+            jerry = jerry.replace(/"/, "");
+            jerry = jerry.replace(/,/, ":");
+            jerry = jerry.replace("}", "");
+            jerry = jerry.replace("{", "");
+            jerry = jerry.replace("]", "");
+            jerry = jerry.replace("[", "");
+            var tmp = jerry.split(":")
+            x++;
+        }
+        
+            var len = tmp.length;
+            var ul = "<ul>";
+        for (var lol = 0; lol < len; lol++){        
+            if (tmp[lol] == 'name'){
+                ul += '<li class=HPli>' + tmp[lol + 1];
+            }
+            else if (tmp[lol] == 'house'){
+                ul += ' ' + tmp[lol + 1];
+            }
+            else if (tmp[lol] == 'ancestry'){
+                ul += ' ' + tmp[lol + 1] + "</li>";
+            }            
+            
+        }
+        ul += "</ul>"
+        var p = document.getElementById('characters');
+        p.innerHTML = ul;
+        
+        } else {
+          alert('Error Code: ' +  objXMLHttpRequest.status);
+          alert('Error Message: ' + objXMLHttpRequest.statusText);
+                }
+        }
+   
+    }
+     objXMLHttpRequest.send(null);
+   }
+     
+  
+                                                                        
+                                                                                               
+function reveal(){
+    var j = "Slytherin";
+    document.getElementById('house').innerHTML=j;
+    }
+     
+    </script>
+</body>
