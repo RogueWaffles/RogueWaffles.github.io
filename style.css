@@ -7,23 +7,24 @@
     border-color: black;
     border-style: solid;
     border-width: medium;
-    
+
 }
 
-.top h1{
+.top h1 {
     text-align: center;
 }
 
-section h1, h3 {
-    font-family: 'Cambay', sans-serif; 
+section h1,
+h3 {
+    font-family: 'Cambay', sans-serif;
     font-style: bold;
     background-color: darkslateblue;
     margin: 3px;
     padding: 1%;
-    
+
 }
-		
-h4{
+
+h4 {
     text-align: center;
 }
 
@@ -38,27 +39,27 @@ h1 {
 }
 
 
-.chroma{ 
+.chroma {
     float: right;
-    width: 100px;
+    width: 50px;
 }
 
 
-h3{
+h3 {
     color: white;
 }
 
 section li {
     list-style-type: none;
     border-style: solid;
-    border-color: lightgray;
+    border-color: #212121;
     margin: 3px;
     padding: 1%;
     background-color: grey;
-    
+
 }
 
-.HPimg{
+.HPimg {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -67,17 +68,17 @@ section li {
     margin-bottom: 10px;
 }
 
-.hooseclr{
-    color:darkgreen;
+.hooseclr {
+    color: darkgreen;
     font-size: 25px;
 }
 
-.Slytherin{
-    color:darkgreen;
+.Slytherin {
+    color: darkgreen;
     font-size: 25px;
 }
 
-.HPButton{
+.HPButton {
     background-color: saddlebrown;
     border-color: darkgoldenrod;
     border-style: solid;
@@ -85,59 +86,64 @@ section li {
     padding: 15px 15px;
     cursor: pointer;
     display: inline-block;
-    color:goldenrod;
+    color: goldenrod;
 }
 
-.back{
+.back {
     border-width: thick;
     background-color: sienna;
-    color:goldenrod;
-}
-.HPB2:hover{
-    background-color: chocolate;
-}
-.HPB:hover{
-    background:url('http://www.addglitter.com/link-sparkle.gif');
+    color: goldenrod;
 }
 
-.HPli{
+.HPB2:hover {
+    background-color: chocolate;
+}
+
+.HPB:hover {
+    background: url('http://www.addglitter.com/link-sparkle.gif');
+}
+
+.HPli {
     border-color: darkgoldenrod;
     background-color: saddlebrown
 }
 
-.HPli:hover{
+.HPli:hover {
     background-color: chocolate;
     color: black;
 }
-.center{
+
+.center {
     text-align: center;
 }
 
-section li:hover{
-    background-color: darkviolet;
+section li:hover {
+    background-color: #3d03fc;
 }
 
-a:hover{
+a:hover {
     background-color: violet;
     color: white;
 }
+
 article li {
     list-style-type: none;
 }
 
-.font, body{
-    font-family: 'Cambay', sans-serif; 
+.font,
+body {
+    font-family: 'Cambay', sans-serif;
     font-style: normal;
-    
+
 }
 
-body section{
+body section {
     text-align: justify;
 }
 
-.sum-text{
+.sum-text {
     padding: 5px;
-    
+
 }
 
 .img {
@@ -145,32 +151,45 @@ body section{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    border-color: aquamarine;
-    border-style: double;
-    border-width: thick;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 body {
-    width: 90%;
-    margin: auto;
-    background-color: dimgray;
-    padding: 70px;
-    border-color: dimgray;
+    border-width: thick;
+    border-color: black;
     border-style: solid;
-    border-width: medium;
+}
+
+.bdyorde{
+    border-right-width: thick;
+    border-right-color: black;
+    border-right-style: solid;
 }
 
 .row:after {
     clear: both;
     content: "";
     display: table;
-    }
+}
+
 .right-col {
     float: right;
-    width: 50%;}
+    width: 50%;
+}
+
 .left-col {
     float: left;
     width: 50%;
+}
+.container{
+    width: 1000px;
+    height: 650px;
+    border-color: black;
+    border-width: thick;
+    border-style: solid;
+}
+
+.clr{
+    color:#381a31;
 }
